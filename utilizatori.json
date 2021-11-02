@@ -1,0 +1,5 @@
+[
+    { "utilizator": "Ioana", "parola": "maibine123", "nume": "Georgescu", "prenume": "Ioana" },
+    { "utilizator": "Vlad12", "parola": "12345", "nume": "Popa", "prenume": "Vlad" },
+    { "utilizator": "Andrei", "parola": "12121999", "nume": "Popa", "prenume": "Andrei" }
+]

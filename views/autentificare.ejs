@@ -1,0 +1,21 @@
+<%if(utilLogat != null){%>
+    <h4 class="login">
+        Logat ca
+        <%=utilLogat%>
+    </h4>
+    <%}%>
+        <form action="/verificare-autentificare" method="post">
+            <br><br>
+            <label for="username"><b>Utilizator</b></label>
+            <input type="text" name="username" required><br><br>
+
+            <label for="parola"><b>Parola</b></label>
+            <input type="password" name="parola" required><br><br><br>
+
+            <button class="button" type="submit">Autentificare</button><br><br>
+
+            <p style="color: red; font-weight: bold;">
+                <%=mesaj%>
+            </p>
+
+        </form>

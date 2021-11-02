@@ -1,0 +1,26 @@
+<h2>
+    Testați-vă cunoștințele
+</h2><br><br>
+
+
+<form action="/rezultat-chestionar" , method="POST">
+
+    <% for(var i=0; i<intrebari.length; i++ ){ %>
+        <div>
+            <h3>
+                <%=intrebari[i].intrebare%>
+            </h3>
+
+            <% for(var j=0; j<intrebari[i].variante.length; j++ ){ %>
+                <input type="radio" name=<%=i%> value="
+                <%=intrebari[i].variante[j]%>" />
+                    <%=intrebari[i].variante[j]%>
+
+                        <% } %>
+        </div>
+
+        <% } %>
+            <br>
+            <button class="button" type="submit">Trimite</button>
+            <br><br>
+</form>

@@ -1,0 +1,27 @@
+[{
+        "intrebare": "Care este cel mai bun magazin online cu produse de bricolaj?",
+        "variante": ["CAMHAUS", "LEROY MERLIN", "BRICO DEPOT", "DEDEMAN"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Se poate vopsi parchetul laminat?",
+        "variante": ["Da, dacă respectăm indicațiile producătorului", "Da, întotdeauna", "Niciodată", "Nu știu"],
+        "corect": 0
+    },
+    {
+        "intrebare": "La ce tensiune se conectează prizele monofazate?",
+        "variante": ["10V", "40V", "230V", "400V"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Vopseaua lavabilă mediu umedă este pentru?",
+        "variante": ["dormitor", "hol", "living", "baie și bucătărie"],
+        "corect": 3
+    },
+    {
+        "intrebare": "Care este puterea minimă la care funcționează un ventilator electric?",
+        "variante": ["10-15W", "50-70W", "30-40W", "100-150W"],
+        "corect": 2
+    }
+
+]

@@ -1,0 +1,112 @@
+<%if(mesaj){%>
+    <h2 style="text-align: center;">
+        Bine ai venit,
+        <%=mesaj%>!
+    </h2>
+    <%}%>
+
+        <%if(log != ' '){%>
+            <p>
+                <a href="/delogare" class="aut"><i class="fa fa-fw fa-sign-out"></i>LOGAT CA  <%=log%></a>
+
+            </p>
+            <br><br>
+
+
+            <form action="/creare-bd" method="get">
+                <button class="button" type="submit">Creare BD</button>
+            </form>
+            <br><br>
+
+            <form action="/inserare-bd" method="get">
+                <button class="button" type="submit">Încărcare BD</button>
+            </form>
+            <br><br>
+
+            <table border="1" align="center">
+                <tr>
+                    <th>Id</th>
+                    <th>Produs</th>
+                    <th>Preț (lei)</th>
+                </tr>
+
+                <%
+      if(listResults.length!=0){
+      var i=1;
+      listResults.forEach(function(data){
+      %>
+                    <tr>
+                        <td>
+                            <%=i; %>
+                        </td>
+                        <td>
+                            <%=data.nume_produs %>
+                        </td>
+                        <td>
+                            <%=data.pret_produs %>
+                        </td>
+                        <td>
+                            <form action="/adaugare-cos" method="post">
+                                <button type="submit">Adaugă în coș</button>
+                                <input type="hidden" name="id" value=<%=i%>>
+                                <input type="hidden" name="prod" value=<%=data.nume_produs%>>
+
+                            </form>
+                        </td>
+                    </tr>
+                    <%  i++; }) %>
+                        <% } else{ %>
+                            <tr>
+                                <td colspan="7">No Data Found</td>
+                            </tr>
+                            <% } %>
+            </table>
+            <br><br>
+            <form action="/vizualizare-cos" method="get">
+                <button class="button" type="submit">Vezi coș</button>
+            </form>
+
+            <% } else{ %>
+                <a href="/autentificare" class="aut"><i class="fa fa-fw fa-user"></i>AUTENTIFICARE</a><br>
+
+                <form action="/creare-bd" method="get">
+                    <button class="button" type="submit">Creare BD</button>
+                </form>
+                <br><br>
+
+                <form action="/inserare-bd" method="get">
+                    <button class="button" type="submit">Încărcare BD</button>
+                </form>
+                <br><br>
+                <table border="1" align="center">
+                    <tr>
+                        <th>Id</th>
+                        <th>Produs</th>
+                        <th>Preț (lei) </th>
+                    </tr>
+
+                    <%
+      if(listResults.length!=0){
+      var i=1;
+      listResults.forEach(function(data){
+      %>
+                        <tr>
+                            <td>
+                                <%=i; %>
+                            </td>
+                            <td>
+                                <%=data.nume_produs %>
+                            </td>
+                            <td>
+                                <%= data.pret_produs%>
+                            </td>
+
+                        </tr>
+                        <%  i++; }) %>
+                            <% } else{ %>
+                                <tr>
+                                    <td colspan="7">No Data Found</td>
+                                </tr>
+                                <% } %>
+                </table>
+                <% } %>
